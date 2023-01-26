@@ -10,7 +10,7 @@ const favicon = require('serve-favicon');
 app.use(bodyParser.json());
 // parse requests of content-type: application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(cors());
+app.use(cors()); 
 app.options("*", cors()); 
 app.engine("html", mustacheExpress())
 app.set("view engine", "html")
